@@ -1,0 +1,16 @@
+<div class="topic-container">
+  <h2>Select Angular Topic</h2>
+
+  <select class="topic-dropdown" (change)="onTopicChange($event?.target)">
+    <option value="">-- Select Topic --</option>
+    @for (topic of topics; track topic.route) {
+      <option [value]="topic.route">
+        {{ topic.name }}
+      </option>
+    }
+  </select>
+</div>
+<hr>
+
+<!-- Selected page will load here -->
+<router-outlet></router-outlet>

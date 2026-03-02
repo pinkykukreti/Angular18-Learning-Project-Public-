@@ -1,0 +1,109 @@
+<h2>Custom Directive Practice</h2>
+
+<p appHighlight="lightblue">
+    Hover me - light blue highlight
+</p>
+
+<p appHighlight="lightgreen">
+    Hover me - light green highlight
+</p>
+
+<p appHighlight="pink">
+    Hover me - pink highlight
+</p>
+
+
+<h2>If, For & Custom Directive Practice</h2>
+
+<button (click)="toggleList()">Toggle User List</button>
+
+<!-- If / else, for-->
+@if (showList) {
+    @for (user of users; track $index) {
+     <p>{{$index + 1}} - {{ user }}</p>
+    }
+} @else {
+  <p>No users to display</p>
+}
+
+<hr>
+
+<button (click)="toggleButton()">Toggle Disable</button>
+
+<!-- Custom Directive -->
+<button [appDisable]="isDisabled">
+    Custom Disabled Button
+</button>
+
+<br/>
+<br/>
+
+<h3>Directive = instruction to Angular on how to change or control DOM (HTML)</h3>
+
+<!-- 
+
+🧩 What is a Directive?
+
+Directive ka kaam hota hai HTML element ka behavior ya structure change karna.
+
+Matlab:
+
+Directive = instruction to Angular on how to change or control DOM (HTML)
+
+Example:
+
+Show / hide element
+
+Change color / style
+
+Loop data
+
+Add extra behavior to input or button
+
+📌 Types of Directives
+
+Angular me mainly 3 types ke directives hote hain:
+
+1️⃣ Structural Directive
+
+👉 DOM ko change karta hai (add/remove elements)
+
+Example:
+
+*ngIf → condition ke base par show / hide
+
+*ngFor → loop lagata hai
+
+*ngSwitch → multiple condition handle karta hai
+
+Simple language:
+
+Structural directive decide karta hai kaunsa element page par rahega ya nahi.
+
+2️⃣ Attribute Directive
+
+👉 Existing element ka look or behavior change karta hai
+
+Example:
+
+ngClass → CSS class add/remove
+
+ngStyle → style change
+
+appHighlight (custom directive)
+
+Simple language:
+
+Attribute directive element ko decorate karta hai (color, disable, hover effect).
+
+3️⃣ Component Directive
+
+👉 Directive with its own HTML template
+
+Example:
+
+Any Angular component (<app-login>, <app-navbar>)
+
+Simple language:
+
+Component bhi ek special directive hai jiske paas apna view hota hai. -->

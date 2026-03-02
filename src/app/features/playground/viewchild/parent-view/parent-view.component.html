@@ -1,0 +1,59 @@
+<h3>Parent Component</h3>
+
+<!-- Using @Input and @ViewChild -->
+<app-child #singleChild [message]="parentMessage" (notify)="handleNotify($event)"></app-child>
+<button (click)="changeSingleChildMessage()">Change Child Message</button>
+
+<hr>
+
+<!-- Using @ViewChildren -->
+<app-child #allChildren [message]="'Child A'" (notify)="handleNotify($event)"></app-child>
+<app-child #allChildren [message]="'Child B'" (notify)="handleNotify($event)"></app-child>
+
+<button (click)="shoutAllChildren()">Shout All Children</button>
+<br/>
+<p>
+    @if(childMessage){
+    Message from Child: {{ childMessage }}
+    }
+</p>
+
+<!-- 
+<p>Message from Child: {{ childMessage }}</p>
+<p>Received from child via @Output: {{childMessageViaOutput}}</p> -->
+
+
+
+<!-- @Input used for parent to child data binding
+
+@Output used for child to parent event communication -->
+
+
+<!-- @ViewChild aur @ViewChildren data sharing ke liye recommended nahi hote.
+Ye mainly child component ko access/control karne ke liye hote hain, data flow ke liye nahi.
+
+✅ @ViewChild kya karta hai?
+
+Parent component ko child component ka instance deta hai.
+
+Use when:
+
+Child ka method call karna ho
+
+Child ka variable read/change karna ho
+
+Focus, reset, DOM access karna ho
+
+Example use:
+
+Button click pe child ka function call karna
+
+✅ @ViewChildren kya karta hai?
+
+Same but multiple child components ke liye.
+
+Use when:
+
+*ngFor se multiple child components ho
+
+Sabke values/methods chahiye  -->

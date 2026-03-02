@@ -1,0 +1,12 @@
+   <div class="card p-3 mt-3 border-success">
+      <h4>Child (OnPush)</h4>
+      <p>Counter: {{ counter }}</p>
+      <p>User: {{ user && user.name }}</p>
+    </div>
+
+
+<!-- Change detection is used in methods where data changes (increment, newUser, observable emit) and
+     manually using ChangeDetectorRef.detectChanges() or markForCheck() inside async logic (setTimeout, API calls). -->
+<!--     
+     Used ChangeDetectionStrategy.OnPush in child UI components to improve performance by updating view only when
+     input data reference changes or observable emits. -->

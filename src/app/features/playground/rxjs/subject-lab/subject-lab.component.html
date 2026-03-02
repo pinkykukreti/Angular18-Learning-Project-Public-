@@ -1,0 +1,47 @@
+  <div class="container mt-3">
+  <h2>RxJS Subject Types – Real Time Demo</h2>
+
+  <!-- Input -->
+  <div class="mb-3">
+    <input #msgInput type="text" class="form-control" placeholder="Enter message" />
+  </div>
+
+  <button class="btn btn-primary me-2" (click)="send(msgInput.value)">
+    Send Message
+  </button>
+
+  <button class="btn btn-danger" (click)="complete()">
+    Complete AsyncSubject
+  </button>
+
+  <hr />
+
+  <!-- Subject -->
+  <div class="card p-2 mb-2">
+    <h5>Subject</h5>
+    <p>Latest Value: <b>{{ subjectMsg }}</b></p>
+    <small>Emits only after subscribe</small>
+  </div>
+
+  <!-- BehaviorSubject -->
+  <div class="card p-2 mb-2 bg-light">
+    <h5>BehaviorSubject</h5>
+    <p>Latest Value: <b>{{ behaviorMsg }}</b></p>
+    <small>Has initial value</small>
+  </div>
+
+  <!-- ReplaySubject -->
+  <div class="card p-2 mb-2 bg-warning">
+    <h5>ReplaySubject (last 2 values)</h5>
+    <p>Latest Value: <b>{{ replayMsg }}</b></p>
+    <small>Replays old values to new subscribers</small>
+  </div>
+
+  <!-- AsyncSubject -->
+  <div class="card p-2 mb-2 bg-info">
+    <h5>AsyncSubject</h5>
+    <p>Final Value (after complete): <b>{{ asyncMsg }}</b></p>
+    <small>Emits only on complete()</small>
+  </div>
+</div>
+

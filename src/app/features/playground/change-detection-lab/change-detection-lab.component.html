@@ -1,0 +1,18 @@
+<div class="container mt-4">
+  <h2>Advanced Change Detection Lab</h2>
+
+  <button class="btn btn-primary me-2" (click)="increment()">Increment</button>
+  <button class="btn btn-warning me-2" (click)="mutateUser()">Mutate User</button>
+  <button class="btn btn-success me-2" (click)="newUser()">New User</button>
+  <button class="btn btn-info me-2" (click)="emitObservable()">Observable Emit</button>
+  <button class="btn btn-secondary me-2" (click)="asyncUpdateWithMarkForCheck()">Async Update</button>
+
+  <hr>
+
+  <h5>Async Pipe Value: {{ counter$ | async }}</h5>
+
+  <app-child-onpush
+    [counter]="counter"
+    [user]="user">
+  </app-child-onpush>
+</div>

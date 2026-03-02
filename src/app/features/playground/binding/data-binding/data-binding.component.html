@@ -1,0 +1,26 @@
+<div class="container mt-3">
+    <h2>Defer </h2>
+    <p>Main content loaded immediately</p>
+    @defer (on timer(5000)) {
+    <app-child> </app-child>
+    }
+    @placeholder {
+    <p>Loading...</p>
+    }
+    <hr />
+    <h2>Data Binding </h2>
+    <hr />
+    <h3>Sting Interpolation </h3>
+    <h4> {{title}} </h4>
+    <hr />
+    <h3>Property Binding </h3>
+    <button [disabled]="isDisabled">Disabled Button</button>
+    <hr />
+    <h3>Event Binding Example</h3>
+    <button class="btn btn-primary" (click)="increment()">Click Me</button>
+    <p>Clicked Count: {{ count }}</p>
+    <hr />
+    <h3>Two-Way Binding Example</h3>
+    <input class="form-control w-50" [(ngModel)]="username" placeholder="Enter name">
+    <p>You typed: {{ username }}</p>
+</div>

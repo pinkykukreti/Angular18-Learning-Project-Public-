@@ -1,0 +1,63 @@
+<div class="container mt-4">
+  <div class="card p-4 shadow">
+    <h3 class="text-center mb-3">Template Driven Form - Template Driven Form is an Angular form where form
+       behavior and validation are handled mainly in the HTML template using ngModel.</h3>
+    <form #userForm="ngForm" (ngSubmit)="onSubmit(userForm)">
+
+      <!-- Name -->
+      <div class="mb-3">
+        <label class="form-label">Name</label>
+        <input type="text" class="form-control" name="name" [(ngModel)]="user.name" required #name="ngModel" />
+        @if(name.invalid && name.touched){
+        <div class="text-danger">Name is required</div>
+        }
+      </div>
+
+      <!-- Email -->
+      <div class="mb-3">
+        <label class="form-label">Email</label>
+        <input type="email" class="form-control" name="email" [(ngModel)]="user.email" required #email="ngModel" />
+
+        @if(email.invalid && email.touched){
+        <div class="text-danger">Valid email required</div>
+        }
+      </div>
+      <!-- Password -->
+      <div class="mb-3">
+        <label class="form-label">Password</label>
+        <input type="password" class="form-control" name="password" [(ngModel)]="user.password" minlength="6" required
+          #password="ngModel" />
+        @if(password.invalid && password.touched){
+        <div class="text-danger">Min 6 characters</div>
+        }
+      </div>
+      <button class="btn btn-primary w-100" type="submit" [disabled]="userForm.invalid">
+        Submit
+      </button>
+    </form>
+    <hr>
+
+    <h3>Live Preview</h3>
+    <p>Name: {{ user.name }}</p>
+    <p>Email: {{ user.email }}</p>
+    <p>Password: {{ user.password }}</p>
+  </div>
+</div>
+
+<div class="container mt-3">
+  <h2>Subject Received Value</h2>
+  <!-- {{receivedValue}} -->
+  <ul>
+    @for (val of allValues; track val) {
+    <li>{{ val }}</li>
+    }
+  </ul>
+</div>
+
+
+<!-- 
+Implemented template driven form for simple user input
+
+Used ngModel and HTML based validation
+
+Suitable for small and basic forms -->

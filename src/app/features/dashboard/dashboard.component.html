@@ -1,0 +1,34 @@
+<app-navbar></app-navbar>
+
+<div class="container mt-4">
+  <h2>Dashboard</h2>
+
+  <div class="mb-3">
+    <!-- <app-angular-topics></app-angular-topics>
+
+    <br/><br/>
+    <hr> -->
+    <a routerLink="angular-topics" class="btn btn-success m-2">Angular QA</a>
+    <a routerLink="rxjs/observable" class="btn btn-primary m-2">Observable</a>
+    <a routerLink="popup" class="btn btn-secondary m-2">Modal(Popup)</a>
+    <a routerLink="rxjs/subject" class="btn btn-dark m-2">Subject</a>
+    <a routerLink="parent-child" class="btn btn-warning m-2">Output/Input</a>
+    <a routerLink="data-binding" class="btn btn-danger m-2">Data Binding </a>
+    <a routerLink="http/post-get" class="btn btn-success m-2">HTTP GET Post/Operators</a>
+    <a routerLink="signals" class="btn btn-info m-2">Signals</a>
+    <a routerLink="forms/template" class="btn btn-warning m-2">Template Form</a>
+    <a routerLink="forms/reactive" class="btn btn-danger m-2">Reactive Form</a>
+    <a routerLink="lifecycle-hooks" class="btn btn-dark m-2">Angular Lifecycle</a>
+    <a routerLink="pipes" class="btn btn-primary m-2">Pipes</a>
+    <a routerLink="directives" class="btn btn-secondary m-2">Directives</a>
+    <a routerLink="change-detection" class="btn btn-success m-2">Change Detection</a>
+    <a routerLink="template" class="btn btn-info m-2">Template</a>
+     <!-- <a routerLink="http/post" class="btn btn-info m-2">HTTP POST</a> -->
+  </div>
+
+  <hr>
+
+  <!-- Child pages load here -->
+  <router-outlet></router-outlet>
+</div>
+

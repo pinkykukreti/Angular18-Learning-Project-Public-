@@ -1,0 +1,47 @@
+/* You can add global styles to this file, and also import other style files */
+h2{
+    color: green;
+}
+
+h3{
+    color: orange;
+}
+.qa-container {
+  width: 75%;
+  margin: auto;
+  font-family: Arial, sans-serif;
+}
+
+.qa-card {
+  border: 1px solid #ccc;
+  margin-bottom: 10px;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.question {
+  background-color: #71b946;
+  color: white;
+  padding: 12px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.question:hover {
+  background-color: #1b9235;
+}
+
+.answer {
+  padding: 12px;
+  background-color: #f3f0ff;
+  border-top: 1px solid #ccc;
+}
+
+.category {
+  font-size: 12px;
+  background-color: #ffeb3b;
+  color: #000;
+  padding: 2px 6px;
+  margin-right: 6px;
+  border-radius: 4px;
+}

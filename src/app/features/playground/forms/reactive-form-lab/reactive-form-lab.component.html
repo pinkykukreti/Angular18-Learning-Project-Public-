@@ -1,0 +1,94 @@
+<h2 class="text-center">Full Reactive Form</h2>
+<h3>Reactive forms are model-driven forms where form logic and validation are
+    defined in the component class using FormGroup and FormControl.</h3>
+
+<button class="btn btn-warning mb-3" (click)="loadUser()">Load User (Edit)</button>
+
+<form [formGroup]="registerForm" (ngSubmit)="submit()" class="container">
+
+  <!-- Name -->
+  <div class="mb-3">
+    <label>Name</label>
+    <input class="form-control" formControlName="name">
+
+    @if(registerForm.get('name')?.errors?.['spaceNotAllowed']){
+      <small class="text-danger">No spaces allowed</small>
+    }
+
+    @if(registerForm.get('name')?.invalid && registerForm.get('name')?.touched){
+      <small class="text-danger">Name required</small>
+    }
+  </div>
+
+  <!-- Email -->
+  <div class="mb-3">
+    <label>Email</label>
+    <input class="form-control" formControlName="email">
+  </div>
+
+  <!-- Gender -->
+  <div class="mb-3">
+    <label>Gender</label>
+    <select class="form-select" formControlName="gender">
+      <option value="">Select</option>
+      <option>Male</option>
+      <option>Female</option>
+    </select>
+  </div>
+
+  <!-- Skills -->
+  <div class="mb-3">
+    <label>Skills</label>
+
+    @for(skill of skillsList; track skill){
+      <div>
+        <input type="checkbox" [value]="skill" (change)="onSkillChange($event)">
+        {{skill}}
+      </div>
+    }
+  </div>
+
+  <!-- Phones -->
+  <div formArrayName="phones">
+    <label>Phone Numbers</label>
+
+   @for (phone of phones.controls; track $index) {
+      <div class="d-flex mb-2">
+        <input class="form-control" [formControlName]="$index">
+        <button type="button" class="btn btn-danger ms-2" (click)="removePhone($index)">X</button>
+      </div>
+    }
+
+    <button type="button" class="btn btn-secondary" (click)="addPhone()">Add Phone</button>
+  </div>
+
+  <!-- Password -->
+  <div class="mb-3">
+    <label>Password</label>
+    <input type="password" class="form-control" formControlName="password">
+  </div>
+
+  <!-- Confirm Password -->
+  <div class="mb-3">
+    <label>Confirm Password</label>
+    <input type="password" class="form-control" formControlName="confirmPassword">
+
+    @if(registerForm.errors?.['passwordMismatch']){
+      <small class="text-danger">Passwords do not match</small>
+    }
+  </div>
+
+  <!-- Agree -->
+  <div class="mb-3">
+    <input type="checkbox" formControlName="agree"> I agree Terms
+  </div>
+
+  <button class="btn btn-primary" [disabled]="registerForm.invalid">Submit</button>
+
+</form>
+
+@if(submittedData){
+  <div class="alert alert-success mt-3">
+    <pre>{{ submittedData | json }}</pre>
+  </div>
+}

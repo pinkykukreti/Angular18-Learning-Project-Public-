@@ -1,0 +1,57 @@
+<div class="container mt-4">
+  <div class="card shadow p-4">
+
+    <h2 class="text-center mb-4">Angular18 Signals Playground</h2>
+
+    <!-- COUNT -->
+    <div class="mb-3">
+      <h5>Counter</h5>
+      <p>Count: <strong>{{ state.count() }}</strong></p>
+      <button class="btn btn-primary me-2" (click)="state.increment()">+</button>
+      <button class="btn btn-danger" (click)="state.decrement()">-</button>
+    </div>
+
+    <hr>
+
+    <!-- USER -->
+    <div class="mb-3">
+      <h5>User Info</h5>
+      <p>User Info (computed): <strong>{{ state.userInfo() }}</strong></p>
+
+      <button class="btn btn-warning me-2" (click)="state.updateUserName('Amit')">
+        Change Name
+      </button>
+      <button class="btn btn-secondary" (click)="state.updateAge(30)">
+        Change Age
+      </button>
+    </div>
+
+    <hr>
+
+    <!-- ITEMS -->
+    <div class="mb-3">
+      <h5>Items</h5>
+      <p>Total Items: <strong>{{ state.totalItems() }}</strong></p>
+
+      <div class="input-group mb-3">
+        <input class="form-control" [(ngModel)]="newItem" placeholder="Enter item">
+        <button class="btn btn-success" (click)="state.addItem(newItem)">
+          Add Item
+        </button>
+      </div>
+
+      <ul class="list-group">
+        @for (item of state.items(); track $index) {
+          <li class="list-group-item d-flex justify-content-between align-items-center">
+            {{ item }}
+            <button class="btn btn-sm btn-outline-danger"
+                    (click)="state.removeItem($index)">
+              X
+            </button>
+          </li>
+        }
+      </ul>
+    </div>
+
+  </div>
+</div>
