@@ -111,6 +111,28 @@ export class NewFeaturesQaComponent {
       question: 'What happens if you don’t destroy modal properly?',
       answer: `It can cause memory leaks and unexpected UI behavior.`
     },
+    {
+      category: 'New Features',
+      question: 'NgModules vs Standalone Components',
+      answer: `NgModules organize components into modules, while Standalone Components remove the need for modules and allow direct imports, making applications simpler and more modular in Angular 18.`
+    },
+    {
+      category: 'New Features',
+      question: 'How is @for better than *ngFor?',
+      answer: `@for is faster and more efficient than *ngFor because it integrates with signals, updating only changed items instead of triggering full Angular change detection for the list.`
+    },
+    {
+      category: 'New Features',
+      question: 'How to use service and interceptor in standalone template?',
+      answer: `In standalone components, services can be injected via providers or inject(), and HTTP interceptors are registered globally using provideHttpClient(withInterceptors([...])) in bootstrapApplication().`
+    },
+     {
+      category: 'New Features',
+      question: 'How to convert signal to observable?',
+      answer: `Angular signals have a built-in method toObservable() to create an RxJS Observable from a signal.`
+    },
+
+
   ];
 
   toggleAnswer(index: number) {

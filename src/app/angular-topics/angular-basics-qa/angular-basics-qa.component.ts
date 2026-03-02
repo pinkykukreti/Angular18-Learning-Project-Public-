@@ -256,6 +256,109 @@ export class AngularBasicsQaComponent {
       question: 'How to update angular app?',
       answer: `To update an Angular app, use ng update @angular/cli @angular/core following the Angular Update Guide, then test and apply migrations for breaking changes.`
     },
+    {
+      category: 'Angular Basics',
+      question: 'Difference between viewEncapsulation options?',
+      answer: `ViewEncapsulation defines how Angular scopes component CSS.
+      Emulated scopes styles to component, None makes styles global, and ShadowDom uses browser’s native Shadow DOM for strict isolation.`
+    },
+    {
+      category: 'Angular Basics',
+      question: 'How to test angular components?',
+      answer: `Angular components are tested using TestBed with Jasmine/Jest to verify component logic, template rendering, and user interactions by mocking dependencies.`
+    },
+    {
+      category: 'Angular Basics',
+      question: 'How to implement basic aninamtions?',
+      answer: `In Angular, basic animations are implemented using the Angular Animations module (@angular/animations).`
+    },
+    {
+      category: 'Angular Basics',
+      question: 'How to handle dynamic component?',
+      answer: `In Angular, dynamic components are components that are created and loaded at runtime instead of being declared directly in the template.
+              They are handled using ViewContainerRef and ComponentRef (and createComponent() in modern Angular).`
+    },
+    {
+      category: 'Angular Basics',
+      question: 'What is use of main.ts file?',
+      answer: `main.ts is the entry point of an Angular application.
+              It bootstraps (starts) the root component and initializes the Angular app in the browser.`
+    },
+    {
+      category: 'Angular Basics',
+      question: 'What is the purpose of sonar?',
+      answer: `Sonar is used for static code analysis to find bugs, security issues, and code quality problems.
+              It improves maintainability and ensures code follows best practices.`
+    },
+    {
+      category: 'Angular Basics',
+      question: 'What are control and statement?',
+      answer: `A statement is a single instruction in a program, while a control statement decides how and when those instructions are executed using conditions and loops.
+              They manage program flow logically and efficiently.`
+    },
+    {
+      category: 'Angular Basics',
+      question: 'What are control and statement?',
+      answer: `A statement is a single instruction in a program, while a control statement decides how and when those instructions are executed using conditions and loops.
+              They manage program flow logically and efficiently.`
+    },
+    {
+      category: 'Angular Basics',
+      question: 'What is eventEmitter?',
+      answer: `EventEmitter is a class in Angular used to emit custom events from a child component to a parent component.
+              It works with @Output() decorator to send data or notifications when an event occurs (like button click)..`
+    },
+    {
+      category: 'Angular Basics',
+      question: 'How to any library in project?',
+      answer: `Install the library via npm install library-name, then import it in your module or component to use its features.
+              For TypeScript libraries, optionally install @types/library-name for type support.`
+    },
+    {
+      category: 'Angular Basics',
+      question: 'How to change the dist directory to something else for ng build?',
+      answer: `Change the build output folder by updating "outputPath" in angular.json or by passing --output-path=folder-name in ng build.`
+    },
+    {
+      category: 'Angular Basics',
+      question: 'What are Dump Components and Smart Components?',
+      answer: `Dumb components are presentational, handle UI only, and receive data via @Input().
+              Smart components handle data, business logic, and state, and pass data/events to dumb components.`
+    },
+    {
+      category: 'Angular Basics',
+      question: 'How to deploy angular application?',
+      answer: `Build the Angular app using ng build and deploy the generated dist/ folder to a web server or cloud hosting.
+              Ensure routing is configured to serve index.html for client-side navigation.`
+    },
+    {
+      category: 'Angular Basics',
+      question: 'Difference between ngIf and ngSwitch?',
+      answer: `*ngIf conditionally shows a template based on a boolean, while *ngSwitch selects one template to render from multiple options based on a value.`
+    },
+    {
+      category: 'Angular Basics',
+      question: 'Difference between Interface and Class?',
+      answer: `An interface defines object structure for type-checking only, while a class defines structure + implementation and can be instantiated at runtime.`
+    },
+    {
+      category: 'Angular Basics',
+      question: 'ViewChild, ViewChildren, and Content child when to use?',
+      answer: `@ViewChild/@ViewChildren access elements/components inside your template, while @ContentChild accesses elements projected from a parent via <ng-content>.`
+    },
+    {
+      category: 'Angular Basics',
+      question: 'What is preserve whitespaces?',
+      answer: `preserveWhitespaces tells Angular whether to keep or remove extra spaces in templates during compilation.
+              true preserves spaces, false (default) removes them for a cleaner DOM.`
+    },
+    {
+      category: 'Angular Basics',
+      question: 'Difference between Enum and Interface?',
+      answer: `Interface defines the shape of objects for type safety, removed at runtime.
+              Enum defines a fixed set of named constants, available at runtime for comparison or assignment.`
+    },
+
   ];
 
   toggleAnswer(index: number) {

@@ -57,6 +57,11 @@ export class RxjsQaComponent {
       answer: 'Emits only last value when completed.'
     },
     {
+      category: 'Subject',
+      question: 'Difference between Observable and an Observer?',
+      answer: 'An Observable is a stream of data that emits values over time, while an Observer is an object that subscribes to the Observable and reacts to emitted values, errors, or completion.'
+    },
+    {
       category: 'Operators',
       question: 'What is operator?',
       answer: 'Operators are functions that change or control data from an Observable   .'
@@ -218,6 +223,19 @@ export class RxjsQaComponent {
       question: 'What is Multicasting?',
       answer: 'Sharing one Observable to many subscribers.'
     },
+    {
+      category: 'Operators',
+      question: 'What is fromEvent in RxJs?',
+      answer: `fromEvent in RxJS creates an Observable from DOM or event sources, allowing you to reactively listen to events like clicks or key presses.
+              It can be combined with RxJS operators for reactive event handling.`
+    },
+    {
+      category: 'Operators',
+      question: 'How to get All data in a single array with RxJs?',
+      answer: `Use toArray() to collect all emitted values from an Observable into a single array.
+              For multiple Observables, forkJoin can combine results into one array after completion.`
+    },
+
   ];
 
   toggleAnswer(index: number) {

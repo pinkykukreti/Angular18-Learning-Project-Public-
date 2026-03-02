@@ -95,6 +95,28 @@ export class ServiceDIQaComponent {
       question: 'Explain optional dependencies and how to handle them.',
       answer: `Use @Optional() decorator to inject dependencies that may not always exist. Angular will inject null if unavailable.`
     },
+    {
+      category: 'Service',
+      question: 'What is hierararical dependency injection?',
+      answer: `Hierarchical DI in Angular organizes injectors in a tree, allowing services to be singleton at root or scoped to a component, depending on where they are provided.
+              Angular resolves dependencies by searching up the injector tree.`
+    },
+    {
+      category: 'Service',
+      question: 'How do we create generic functions in service?',
+      answer: `Generic functions in services use TypeScript generics (<T>) to make the function reusable for different types while maintaining type safety.`
+    },
+    {
+      category: 'Service',
+      question: 'What are decorators? different type of decorators?',
+      answer: `Decorators are metadata functions in Angular/TypeScript that define how classes, properties, or methods should behave.
+              Types include class decorators (@Component), property decorators (@Input, @Output), and method/parameter decorators (@HostListener, @Inject).`
+    },
+  {
+      category: 'Service',
+      question: 'What is ngZone?',
+      answer: `NgZone in Angular is a service that helps Angular detect asynchronous operations and trigger change detection automatically when the application state changes.`
+    },
   ];
 
   toggleAnswer(index: number) {

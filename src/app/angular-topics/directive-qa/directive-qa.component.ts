@@ -98,6 +98,11 @@ Better than direct DOM access.`
               ng-container - Acts as a logical wrapper; it does not create an extra DOM element.
               Useful for grouping elements with structural directives like *ngIf or *ngFor.`
     },
+        {
+      category: 'Directive',
+      question: 'Difference between template and template url?',
+      answer: `template is inline HTML defined directly in the component, while templateUrl points to an external HTML file for the component template.`
+    },
     {
       category: 'Directive',
       question: 'What is ViewContainerRef?',

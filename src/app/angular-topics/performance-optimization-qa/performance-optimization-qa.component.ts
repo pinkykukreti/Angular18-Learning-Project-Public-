@@ -60,6 +60,12 @@ export class PerformanceOptimizationQaComponent {
       question: 'What is Ahead-of-Time (AOT) compilation?',
       answer: `AOT compiles templates at build time instead of runtime, resulting in:- Faster rendering, Smaller bundles, Early error detection`
     },
+      {
+      category: 'Performance Optimization',
+      question: 'How to prevent unnecessary re-renders in an angular application?',
+      answer: `Prevent unnecessary re-renders by using ChangeDetectionStrategy.OnPush, trackBy in *ngFor, immutable data, and running heavy tasks outside Angular’s zone.
+              Avoid calling functions directly in templates to minimize repeated change detection.`
+    },
     {
       category: 'Performance Optimization',
       question: 'What is the role of RxJS operators in performance?',
@@ -137,6 +143,13 @@ export class PerformanceOptimizationQaComponent {
       question: 'How do you handle performance in large enterprise Angular apps?',
       answer: `Lazy loading, OnPush, State management, Virtual scrolling, SSR, Code splitting`
     },
+    {
+      category: 'Performance Optimization',
+      question: 'What is change detector class in angular?',
+      answer: `ChangeDetectorRef is Angular’s class for manually controlling change detection, useful in OnPush components or when updates happen outside Angular.
+              It allows methods like detectChanges(), markForCheck(), detach(), and reattach().`
+    },
+    
   ];
 
   toggleAnswer(index: number) {

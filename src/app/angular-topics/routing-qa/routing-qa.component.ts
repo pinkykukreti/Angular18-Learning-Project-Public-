@@ -78,6 +78,12 @@ export class RoutingQaComponent {
       answer: `Lazy Loading using loadChildren is implemented by loading feature modules only when their route is accessed, which improves application performance.
       loadChildren loads a module on demand instead of at application startup.`
     },
+        {
+      category: 'Routing',
+      question: 'What are auxiliary routes?',
+      answer: `Auxiliary routes (also called named outlets) are used to load multiple components at the same time in different <router-outlet> sections on the same page.
+      They allow parallel navigation instead of replacing only one main view.`
+    },
     {
       category: 'Routing',
       question: 'What is ActivatedRoute?',
@@ -289,6 +295,12 @@ export class RoutingQaComponent {
       category: 'Routing',
       question: 'What is canMatch (new guard)?',
       answer: 'canMatch controls whether a route can be matched and loaded before navigation occurs.'
+    },
+       {
+      category: 'Routing',
+      question: 'How does angular routing work?',
+      answer: `Angular 18 uses provideRouter() with standalone components to map URLs to components.
+      It loads components dynamically in <router-outlet> without page reload and supports lazy loading, guards, and route parameters.`
     },
   ];
 

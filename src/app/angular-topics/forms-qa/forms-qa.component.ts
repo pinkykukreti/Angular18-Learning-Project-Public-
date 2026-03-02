@@ -131,6 +131,11 @@ export class FormsQaComponent {
     },
     {
       category: 'Forms',
+      question: 'Difference between ngModel and [(ngModel )]?',
+      answer: `[ngModel] binds data one-way from component to template, while [(ngModel)] enables two-way binding, updating the component when the user changes the input.`
+    },
+    {
+      category: 'Forms',
       question: `What is updateOn: 'blur' or 'submit'?`,
       answer: `Controls when validation runs instead of on every keystroke.`
     },
@@ -138,6 +143,26 @@ export class FormsQaComponent {
       category: 'Forms',
       question: 'What is the role of statusChanges?',
       answer: `Observable that emits when form validation status changes (VALID/INVALID).`
+    },
+    {
+      category: 'Forms',
+      question: 'How to enable the next field in a reactive form based on the previous dropdown selection?',
+      answer: `You can enable the next field based on the previous dropdown selection using valueChanges and the enable() / disable() methods.`
+    },
+    {
+      category: 'Forms',
+      question: 'What is template reference variable in angular?',
+      answer: `A template reference variable is a template-scoped variable (declared with #) that gives access to a DOM element or component instance for property binding or method calls.`
+    },
+    {
+      category: 'Forms',
+      question: 'In How many ways we can pass template to component?',
+      answer: `Templates can be passed to a component via content projection (ng-content), TemplateRef inputs, or capturing projected templates using @ContentChild/@ContentChildren.`
+    },
+       {
+      category: 'Forms',
+      question: 'What is nested reactive form?',
+      answer: `A nested reactive form is a reactive form containing FormGroup or FormArray inside another FormGroup, used to manage complex or hierarchical form data.`
     },
   ];
 

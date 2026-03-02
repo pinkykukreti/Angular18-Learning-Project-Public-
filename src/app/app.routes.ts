@@ -123,6 +123,18 @@ export const routes: Routes = [
             .then(m => m.DirectivesLabComponent)
       },
       {
+        path: 'git-qa',
+        loadComponent: () =>
+          import('./git-qa/git-qa.component')
+            .then(m => m.GitQaComponent)
+      },
+      {
+        path: 'bootstrap-qa',
+        loadComponent: () =>
+          import('./bootstrap-qa/bootstrap-qa.component')
+            .then(m => m.BootstrapQaComponent)
+      },
+      {
         path: 'angular-topics',
         loadComponent: () =>
           import('./angular-topics/angular-topics.component')
@@ -194,13 +206,13 @@ export const routes: Routes = [
               import('./angular-topics/http-interceptors-qa/http-interceptors-qa.component')
                 .then(m => m.HttpInterceptorsQaComponent)
           },
-           {
+          {
             path: 'modal-popup-qa',
             loadComponent: () =>
               import('./angular-topics/modal-popup-qa/modal-popup-qa.component')
                 .then(m => m.ModalPopupQaComponent)
           },
-           {
+          {
             path: 'new-features-qa',
             loadComponent: () =>
               import('./angular-topics/new-features-qa/new-features-qa.component')

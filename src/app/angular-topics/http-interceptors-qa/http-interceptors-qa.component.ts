@@ -57,6 +57,11 @@ export class HttpInterceptorsQaComponent {
     },
     {
       category: 'Http, Auth',
+      question: 'What is the difference between HttpClient and HttpService?',
+      answer: `HttpClient is Angular’s built-in service for HTTP requests, while HttpService is a custom service that wraps HttpClient for reusable API calls and centralized logic.`
+    },
+    {
+      category: 'Http, Auth',
       question: 'How do interceptors handle errors globally?',
       answer: `intercept(req, next) {
       return next.handle(req).pipe(
@@ -210,6 +215,53 @@ export class HttpInterceptorsQaComponent {
       question: 'How to implement 2FA in Angular?',
       answer: `After password login, prompt for OTP, Verify OTP via backend, Only grant JWT after successful OTP`
     },
+    {
+      category: 'Http, Auth',
+      question: 'Post login how to validate and enable roles?',
+      answer: `Post-login, fetch user roles from the backend, store them in a service, and enable features or routes dynamically using *ngIf, [disabled], or route guards based on the roles.`
+    },
+    {
+      category: 'Http, Auth',
+      question: 'Explain angular application flow? what happens after compilation?',
+      answer: `Angular code is compiled (AOT/JIT) into JS bundles, bootstraps the root component via main.ts, and renders templates inside <router-outlet> based on routing.
+              Change detection, services, and lifecycle hooks manage dynamic UI updates without page reload.`
+    },
+    {
+      category: 'Http, Auth',
+      question: 'Post login how to validate and enable roles?',
+      answer: `Post-login, fetch user roles from the backend, store them in a service, and enable features or routes dynamically using *ngIf, [disabled], or route guards based on the roles.`
+    },
+    {
+      category: 'Http, Auth',
+      question: 'How to add header in the request?',
+      answer: `In Angular, use HttpHeaders with HttpClient to add custom headers to requests.
+              Pass the headers object in the request options when calling get(), post(), or other HTTP methods.`
+    },
+    {
+      category: 'Http, Auth',
+      question: 'An App needs to handle offline scenarios where API calls fail. What wuld you do?',
+      answer: `Handle offline scenarios by using catchError + retry, caching data locally (LocalStorage/IndexedDB), and enabling Angular PWA for offline support.
+              Always provide fallback data and notify users about offline status.`
+    },
+    {
+      category: 'Http, Auth',
+      question: 'What is best practice to improve security?',
+      answer: `Improve Angular app security by using built-in sanitization, avoiding direct DOM manipulation, sending secure tokens via HttpClient, and validating user input.
+              Also use Route Guards, HTTPS, and secure headers to protect routes and APIs.`
+    },
+    {
+      category: 'Http, Auth',
+      question: 'Instead of httpClient how to integrate api calls?',
+      answer: `Instead of HttpClient, APIs can be integrated using fetch, Axios, or WebSockets, optionally converting Promises to Observables for reactive handling.
+              HttpClient is preferred for Angular because of built-in interceptors and RxJS support.`
+    },
+    {
+      category: 'Http, Auth',
+      question: 'How to see what modules take and how much size is in prod bundle?',
+      answer: `Use ng build --prod --stats-json with webpack-bundle-analyzer or source-map-explorer to see modules and their sizes in the production bundle.
+              This helps identify heavy modules and optimize your Angular app.`
+    },
+
   ];
 
   toggleAnswer(index: number) {

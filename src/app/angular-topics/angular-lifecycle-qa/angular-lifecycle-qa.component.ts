@@ -135,6 +135,12 @@ export class AngularLifecycleQaComponent {
       question: 'Where to access DOM?',
       answer: `ngAfterViewInit()`
     },
+                         {
+      category: 'Lifecycle Hooks',
+      question: 'Why we call any function inside ngOnInIt rather than Constructor?',
+      answer: `We call functions inside ngOnInit because Angular sets up inputs and bindings only after the constructor.
+              Constructor is only for dependency injection and basic setup, not for data-bound logic.`
+    },
   ];
 
   toggleAnswer(index: number) {
