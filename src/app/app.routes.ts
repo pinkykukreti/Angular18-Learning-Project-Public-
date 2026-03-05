@@ -134,6 +134,24 @@ export const routes: Routes = [
           import('./bootstrap-qa/bootstrap-qa.component')
             .then(m => m.BootstrapQaComponent)
       },
+         {
+        path: 'html-qa',
+        loadComponent: () =>
+          import('./html-qa/html-qa.component')
+            .then(m => m.HtmlQaComponent)
+      },
+            {
+        path: 'css-sass-qa',
+        loadComponent: () =>
+          import('./css-sass-qa/css-sass-qa.component')
+            .then(m => m.CssSassQaComponent)
+      },
+            {
+        path: 'javascript-qa',
+        loadComponent: () =>
+          import('./javascript-qa/javascript-qa.component')
+            .then(m => m.JavascriptQaComponent)
+      },
       {
         path: 'angular-topics',
         loadComponent: () =>
